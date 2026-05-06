@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  ALEX RON — PERSONAL PORTFOLIO SITE                         ║
+  ║                                                              ║
+  ║  TO FIND YOUR PERSONAL INFO QUICKLY:                         ║
+  ║  Search for "EDIT:" in this file — every editable field      ║
+  ║  is tagged with that marker.                                 ║
+  ║                                                              ║
+  ║  WIX EMBED INSTRUCTIONS:                                     ║
+  ║  1. Add an "Embed a Site" or "HTML iframe" element           ║
+  ║  2. Paste this entire file as the code                       ║
+  ║  3. Set width to 100% and height to at least 5000px          ║
+  ║  4. On the Wix page, remove all other elements               ║
+  ║  5. Set page margins/padding to 0                            ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<!-- EDIT: PAGE TITLE — Update with your full name -->
+<title>Alex Ron — Digital Marketing & E-Commerce Operations</title>
+<meta name="description" content="Digital marketing leader with 15+ years building revenue-generating e-commerce businesses. Cross-functional team management, lifecycle email, CRO, and AI-assisted operations.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0C0E12;
+  --bg-card: #14171E;
+  --bg-elevated: #1A1E28;
+  --text: #E8E6E1;
+  --text-muted: #8A8B8D;
+  --accent: #C4A265;
+  --accent-bright: #DDB96E;
+  --white: #FFFFFF;
+  --border: rgba(196, 162, 101, 0.15);
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Subtle grain texture */
+body::before {
+  content: '';
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999;
+}
+
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-bright); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ===== NAV ===== */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  padding: 1rem 1.5rem;
+  background: rgba(12, 14, 18, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav .nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+/* EDIT: NAV LOGO NAME — Update if your name changes */
+nav .logo {
+  font-family: var(--font-display); font-size: 1.1rem;
+  color: var(--white); letter-spacing: 0.02em;
+}
+
+nav .nav-links { display: flex; gap: 1.5rem; }
+nav .nav-links a {
+  color: var(--text-muted); font-size: 0.8rem; font-weight: 400;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+nav .nav-links a:hover { color: var(--accent); }
+
+/* Mobile hamburger */
+.mobile-menu-btn {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 28px; height: 20px; position: relative; z-index: 200;
+}
+.mobile-menu-btn span {
+  display: block; width: 100%; height: 2px; background: var(--text);
+  position: absolute; left: 0; transition: all 0.3s;
+}
+.mobile-menu-btn span:nth-child(1) { top: 0; }
+.mobile-menu-btn span:nth-child(2) { top: 9px; }
+.mobile-menu-btn span:nth-child(3) { top: 18px; }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 6rem 0 5rem;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute; top: 0; right: -10%; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(196, 162, 101, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.hero-text h1 span { color: var(--accent); }
+
+.hero-text .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 540px;
+  margin-bottom: 1.75rem;
+}
+
+.hero-text .cta-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none; cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.btn-primary:hover { background: var(--accent-bright); transform: translateY(-1px); color: var(--bg); }
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.hero-photo {
+  width: 280px; height: 350px;
+  position: relative;
+}
+
+.hero-photo .photo-frame {
+  width: 100%; height: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0.75rem;
+  overflow: hidden;
+}
+
+/*
+  ╔══════════════════════════════════════════════════════════╗
+  ║  EDIT: PROFILE PHOTO                                     ║
+  ║                                                          ║
+  ║  To add your photo:                                      ║
+  ║  1. Host your image (upload to Wix Media, Imgur,         ║
+  ║     Cloudinary, or any image host)                       ║
+  ║  2. Find the <div class="photo-placeholder"> below       ║
+  ║     in the HTML and REPLACE the entire div with:         ║
+  ║                                                          ║
+  ║     <img src="YOUR_IMAGE_URL_HERE"                       ║
+  ║          alt="Alex Ron"                                  ║
+  ║          style="width:100%;height:100%;object-fit:cover"> ║
+  ║                                                          ║
+  ║  Recommended: 560x700px or similar portrait ratio        ║
+  ╚══════════════════════════════════════════════════════════╝
+*/
+
+.hero-photo .photo-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.hero-photo .photo-placeholder {
+  color: var(--text-muted); font-size: 0.8rem;
+  text-align: center; padding: 2rem;
+}
+
+.hero-photo .photo-placeholder .icon {
+  width: 56px; height: 56px;
+  border: 2px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 0.75rem;
+  color: var(--accent); font-size: 1.1rem; font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.hero-photo::before {
+  content: '';
+  position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+/* ===== METRICS ===== */
+.metrics {
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.metric { text-align: center; padding: 1.25rem 0.75rem; }
+
+.metric .number {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.metric .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+/* ===== SHARED SECTION STYLES ===== */
+section { padding: 5rem 0; }
+
+.section-label {
+  font-size: 0.7rem; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.2em;
+  font-weight: 600; margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: var(--white); margin-bottom: 1.25rem; line-height: 1.2;
+}
+
+.section-intro {
+  color: var(--text-muted); font-weight: 300; font-size: 1rem;
+  max-width: 620px; line-height: 1.8; margin-bottom: 2.5rem;
+}
+
+/* ===== EXPERTISE ===== */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.expertise-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.expertise-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.expertise-card .card-icon {
+  font-size: 1.4rem; margin-bottom: 0.85rem; color: var(--accent);
+}
+
+.expertise-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem; color: var(--white); margin-bottom: 0.6rem;
+}
+
+.expertise-card p {
+  font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7;
+}
+
+/* ===== AI + EXPERIENCE (NEW SECTION) ===== */
+.ai-section {
+  border-top: 1px solid var(--border);
+  padding: 5rem 0;
+}
+
+.ai-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.ai-main p {
+  font-size: 0.95rem; color: var(--text-muted); font-weight: 300;
+  line-height: 1.85; margin-bottom: 1.25rem;
+}
+
+.ai-main p strong { color: var(--text); font-weight: 500; }
+
+.ai-callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 2rem;
+}
+
+.ai-callout h4 {
+  font-family: var(--font-display);
+  font-size: 1rem; color: var(--accent); margin-bottom: 0.75rem;
+}
+
+.ai-callout p {
+  font-size: 0.88rem; color: var(--text-muted); font-weight: 300;
+  line-height: 1.75;
+}
+
+/* ===== APPROACH ===== */
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.approach-item {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.approach-item .num {
+  font-family: var(--font-display);
+  font-size: 1.8rem; color: rgba(196, 162, 101, 0.2); margin-bottom: 0.6rem;
+}
+
+.approach-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; color: var(--white); margin-bottom: 0.4rem;
+}
+
+.approach-item p {
+  font-size: 0.88rem; color: var(--text-muted); font-weight: 300; line-height: 1.75;
+}
+
+/* ===== EXPERIENCE ===== */
+.timeline { max-width: 680px; }
+
+.timeline-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.5rem;
+}
+
+.timeline-item .dates {
+  font-size: 0.78rem; color: var(--accent);
+  letter-spacing: 0.05em; font-weight: 500; padding-top: 0.15rem;
+}
+
+.timeline-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem; color: var(--white); margin-bottom: 0.2rem;
+}
+
+.timeline-item .org {
+  font-size: 0.82rem; color: var(--text-muted); font-weight: 300; margin-bottom: 0.4rem;
+}
+
+.timeline-item p {
+  font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.certs-row { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+.cert-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.1rem 1.5rem;
+  display: flex; align-items: center; gap: 0.85rem;
+  transition: border-color 0.3s;
+}
+
+.cert-badge:hover { border-color: var(--accent); }
+
+.cert-badge .cert-icon {
+  width: 34px; height: 34px;
+  background: rgba(196, 162, 101, 0.1);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 0.85rem; font-weight: 600;
+  flex-shrink: 0;
+}
+
+.cert-badge .cert-text h4 {
+  font-size: 0.82rem; color: var(--white); font-weight: 500; margin-bottom: 0.1rem;
+}
+
+.cert-badge .cert-text span {
+  font-size: 0.72rem; color: var(--text-muted); font-weight: 300;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  padding: 5rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.contact-section .section-title { margin-bottom: 0.75rem; }
+
+.contact-section .contact-sub {
+  color: var(--text-muted); font-weight: 300; font-size: 1rem; margin-bottom: 2rem;
+}
+
+.contact-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.72rem; color: var(--text-muted); font-weight: 300; letter-spacing: 0.05em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.2s; }
+.d3 { animation-delay: 0.3s; }
+.d4 { animation-delay: 0.4s; }
+.d5 { animation-delay: 0.5s; }
+
+/* ============================================
+   MOBILE RESPONSIVE — 900px and below
+   ============================================ */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 200px; height: 250px;
+    margin: 0 auto;
+    order: -1; /* Photo on top on mobile */
+  }
+
+  .hero-text .subtitle { margin-left: auto; margin-right: auto; }
+  .hero-text .cta-row { justify-content: center; }
+
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .ai-content { grid-template-columns: 1fr; }
+  .approach-grid { grid-template-columns: 1fr; }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  nav .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+
+  /* Mobile menu open state */
+  nav.menu-open .nav-links {
+    display: flex; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(12, 14, 18, 0.97);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    gap: 1.25rem;
+  }
+
+  nav.menu-open .mobile-menu-btn span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+  nav.menu-open .mobile-menu-btn span:nth-child(2) { opacity: 0; }
+  nav.menu-open .mobile-menu-btn span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 1.1rem; }
+  section { padding: 3.5rem 0; }
+  .hero { padding: 4rem 0 3.5rem; }
+  .metrics { padding: 3rem 0; }
+  .certs-row { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; text-align: center; }
+  .hero-text .cta-row { flex-direction: column; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <!-- EDIT: NAV NAME -->
+    <div class="logo">Alex Ron</div>
+    <div class="nav-links">
+      <a href="#expertise">Expertise</a>
+      <a href="#ai-experience">AI + Experience</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Menu" onclick="document.getElementById('topnav').classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <!-- EDIT: HERO HEADLINE — Update if positioning changes -->
+        <h1 class="animate">I build digital marketing <span>systems that scale.</span></h1>
+        <p class="subtitle animate d2">Digital marketing leader with 15+ years building revenue-generating e-commerce businesses from scratch. I manage cross-functional teams, optimize full-funnel customer journeys, and design AI-assisted operations that consolidate reporting and accelerate execution.</p>
+        <div class="cta-row animate d3">
+          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a href="#expertise" class="btn-outline">See my work</a>
+        </div>
+      </div>
+      <div class="hero-photo animate d4">
+        <div class="photo-frame">
+
+          <!--
+          ╔══════════════════════════════════════════════════════════╗
+          ║  EDIT: PROFILE PHOTO                                     ║
+          ║                                                          ║
+          ║  REPLACE everything between *** START PHOTO ***          ║
+          ║  and *** END PHOTO *** with:                             ║
+          ║                                                          ║
+          ║  <img src="YOUR_IMAGE_URL_HERE"                          ║
+          ║       alt="Alex Ron"                                     ║
+          ║       style="width:100%;height:100%;object-fit:cover">   ║
+          ║                                                          ║
+          ║  Upload your image to Wix Media Manager first,           ║
+          ║  then use the generated URL.                             ║
+          ║  Recommended size: 560x700px (portrait ratio)            ║
+          ╚══════════════════════════════════════════════════════════╝
+          -->
+
+          <!-- *** START PHOTO *** -->
+          <div class="photo-placeholder">
+            <div class="icon">AR</div>
+            <span>Replace with<br>professional headshot<br><small style="color:var(--accent)">(see code comments)</small></span>
+          </div>
+          <!-- *** END PHOTO *** -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== METRICS ===== -->
+<section class="metrics">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric animate"><div class="number">11,300+</div><div class="label">Email Subscribers</div></div>
+      <div class="metric animate d1"><div class="number">19–25%</div><div class="label">Open Rates</div></div>
+      <div class="metric animate d2"><div class="number">50+</div><div class="label">Campaigns Executed</div></div>
+      <div class="metric animate d3"><div class="number">$995</div><div class="label">High-Ticket Conversions</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERTISE ===== -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label animate">What I Do</div>
+    <h2 class="section-title animate d1">Full-stack digital marketing<br>with an operator's mindset.</h2>
+    <p class="section-intro animate d2">I don't just plan strategy — I've built and run every system myself. That means I understand what works, what breaks, and where the real leverage is.</p>
+
+    <div class="expertise-grid">
+      <div class="expertise-card animate d2">
+        <div class="card-icon">&#9783;</div>
+        <h3>Cross-Functional Leadership</h3>
+        <p>Managing creative, technical, and marketing teams simultaneously — aligning paid media, web development, social, email, and design toward unified revenue goals.</p>
+      </div>
+      <div class="expertise-card animate d3">
+        <div class="card-icon">&#9881;</div>
+        <h3>E-Commerce Operations</h3>
+        <p>End-to-end e-commerce management including checkout optimization, subscription billing, payment reconciliation, digital fulfillment, and multi-platform revenue consolidation.</p>
+      </div>
+      <div class="expertise-card animate d4">
+        <div class="card-icon">&#9993;</div>
+        <h3>Lifecycle Email & CRO</h3>
+        <p>Building and optimizing email programs from list growth through high-ticket conversion. Deliverability, segmentation, automation sequences, A/B testing, and scarcity-based funnel design.</p>
+      </div>
+      <div class="expertise-card animate d2">
+        <div class="card-icon">&#9729;</div>
+        <h3>AI-Assisted Operations</h3>
+        <p>Building practical AI systems using Claude Projects, Google Apps Script, and Make.com to consolidate reporting, generate campaigns, and accelerate execution with minimal headcount.</p>
+      </div>
+      <div class="expertise-card animate d3">
+        <div class="card-icon">&#9776;</div>
+        <h3>Reporting & Analytics</h3>
+        <p>Multi-source data consolidation across GA4, payment platforms, and email tools. KPI dashboards, revenue rollups, attribution logic, and conversion reporting that drives action.</p>
+      </div>
+      <div class="expertise-card animate d4">
+        <div class="card-icon">&#9654;</div>
+        <h3>Content & Creative Production</h3>
+        <p>Weekly video production in Final Cut Pro, 4K asset enhancement, content repackaging strategies, and editorial systems that extend the value of existing digital catalogs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI + EXPERIENCE (THE OPERATOR ADVANTAGE) ===== -->
+<section id="ai-experience" class="ai-section">
+  <div class="container">
+    <div class="section-label animate">The Operator Advantage</div>
+    <h2 class="section-title animate d1">AI is a force multiplier —<br>but only with the right operator.</h2>
+
+    <div class="ai-content">
+      <div class="ai-main animate d2">
+        <p>AI tools like Claude and ChatGPT have access to vast knowledge — but <strong>knowledge isn't experience.</strong> In practice, AI can spend hours pursuing technically plausible solutions that anyone with real platform experience would recognize as dead ends.</p>
+        <p>I've built my workflow around directing AI with operator-level judgment: knowing when to trust its output, when to override it, and when to redirect it entirely. The result is faster execution, fewer wasted cycles, and solutions that actually work in production — not just in theory.</p>
+        <p>This isn't about replacing AI or competing with it. It's about <strong>being the person who makes AI actually useful</strong> in a business context — the experienced hand that turns raw capability into reliable output.</p>
+      </div>
+      <div class="ai-callout animate d3">
+        <h4>Real Example</h4>
+        <p>While building a web-based conversion funnel, AI proposed multiple solutions for a modal popup component — all technically sound on paper. But I knew from experience that the platform enforced container-level rendering constraints that would block every proposed approach. Instead of iterating through dead ends, I redirected to the platform's native lightbox system, which rendered independently of those constraints. One decision saved hours of iteration, tokens, and development cost. That's what operator experience looks like.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPROACH ===== -->
+<section id="approach" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label animate">How I Work</div>
+    <h2 class="section-title animate d1">Principles, not playbooks.</h2>
+    <p class="section-intro animate d2">Playbooks expire. Principles adapt. Here's what drives every decision I make.</p>
+
+    <div class="approach-grid">
+      <div class="approach-item animate d2">
+        <div class="num">01</div>
+        <h3>Revenue over activity</h3>
+        <p>More campaigns isn't better if they don't convert. I optimize toward the biggest conversion event — whether that's a high-ticket sale, subscription upgrade, or qualified lead — not the most transactions.</p>
+      </div>
+      <div class="approach-item animate d3">
+        <div class="num">02</div>
+        <h3>Systems over heroics</h3>
+        <p>If it requires a hero every time, it's not scalable. I build repeatable workflows, automated reporting, and documented processes that work without someone watching.</p>
+      </div>
+      <div class="approach-item animate d4">
+        <div class="num">03</div>
+        <h3>Data finds the answer</h3>
+        <p>I once found a multi-month revenue attribution gap by cross-referencing settlement records against transaction exports. The insight was invisible in dashboards — it took manual forensics. I bring that rigor everywhere.</p>
+      </div>
+      <div class="approach-item animate d5">
+        <div class="num">04</div>
+        <h3>Assets compound</h3>
+        <p>Content isn't disposable. Email lists, video catalogs, reporting infrastructure — these are assets that appreciate. I think about long-term leverage, not one-time wins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label animate">Experience</div>
+    <h2 class="section-title animate d1">15+ years building things that work.</h2>
+
+    <div class="timeline">
+      <div class="timeline-item animate d2">
+        <div class="dates">2024 – 2025</div>
+        <div>
+          <h3>AI Operations System</h3>
+          <div class="org">Claude Projects, Google Apps Script, Make.com</div>
+          <p>Designed an AI-assisted business intelligence system connecting reporting, campaign generation, attribution tracking, and performance dashboards across five data sources.</p>
+        </div>
+      </div>
+      <div class="timeline-item animate d3">
+        <div class="dates">2018 – Present</div>
+        <div>
+          <h3>Founder & Digital Operations Manager</h3>
+          <div class="org">Direct-to-Consumer Digital Products Business</div>
+          <p>Built and scaled a D2C digital products business — subscription memberships, individual downloads, premium bundles, and a $995 lifetime tier. Managed cross-functional teams across creative, web, email, social, and paid distribution.</p>
+        </div>
+      </div>
+      <div class="timeline-item animate d4">
+        <div class="dates">2015 – 2020</div>
+        <div>
+          <h3>Founder</h3>
+          <div class="org">B2B Referral Service & E-Commerce Stores</div>
+          <p>Built a B2B architect referral network and multiple Shopify e-commerce stores. Owned marketing, product management, fulfillment, and customer acquisition end-to-end.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label animate">Credentials</div>
+    <h2 class="section-title animate d1">Certifications</h2>
+
+    <div class="certs-row">
+      <div class="cert-badge animate d2">
+        <div class="cert-icon">H</div>
+        <div class="cert-text"><h4>Inbound Marketing</h4><span>HubSpot · Valid through Sep 2027</span></div>
+      </div>
+      <div class="cert-badge animate d3">
+        <div class="cert-icon">H</div>
+        <div class="cert-text"><h4>Email Marketing</h4><span>HubSpot · Valid through Sep 2027</span></div>
+      </div>
+      <div class="cert-badge animate d4">
+        <div class="cert-icon">H</div>
+        <div class="cert-text"><h4>Sales Hub Software</h4><span>HubSpot · Valid through Sep 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-label animate">Let's Talk</div>
+    <h2 class="section-title animate d1">Ready to connect?</h2>
+
+    <!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║  EDIT: AVAILABILITY STATUS                               ║
+    ║  Update this line when your job search status changes    ║
+    ╚══════════════════════════════════════════════════════════╝
+    -->
+    <p class="contact-sub animate d2">Currently open to Digital Marketing Manager and E-Commerce Operations roles — Los Angeles area or remote.</p>
+
+    <div class="contact-row animate d3">
+
+      <!--
+      ╔══════════════════════════════════════════════════════════╗
+      ║  EDIT: EMAIL ADDRESS                                     ║
+      ║  Current: neoalcom@gmail.com                             ║
+      ╚══════════════════════════════════════════════════════════╝
+      -->
+      <a href="mailto:neoalcom@gmail.com" class="btn-primary" target="_blank">Email me</a>
+
+      <!--
+      ╔══════════════════════════════════════════════════════════╗
+      ║  EDIT: LINKEDIN URL                                      ║
+      ║  Current: www.linkedin.com/in/alex-r-digital             ║
+      ╚══════════════════════════════════════════════════════════╝
+      -->
+      <a href="https://www.linkedin.com/in/alex-r-digital" class="btn-outline" target="_blank">LinkedIn</a>
+
+      <!--
+      ╔══════════════════════════════════════════════════════════╗
+      ║  EDIT: PHONE NUMBER                                      ║
+      ║  Current: PLACEHOLDER — replace with real number         ║
+      ║  To REMOVE phone entirely: delete this <a> tag           ║
+      ╚══════════════════════════════════════════════════════════╝
+      -->
+      <a href="tel:+18185551234" class="btn-outline">+1 (818) 555-1234</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <!-- EDIT: FOOTER NAME -->
+    <p>&copy; 2026 Alex Ron. Built with purpose.</p>
+  </div>
+</footer>
+
+<!-- ===== SCROLL ANIMATIONS ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+
+  // Hero animations play immediately
+  document.querySelectorAll('.hero .animate').forEach(el => {
+    el.style.animationPlayState = 'running';
+  });
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('topnav').classList.remove('menu-open');
+    });
+  });
+});
+</script>
+
+</body>
+</html>
