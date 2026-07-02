@@ -667,6 +667,123 @@ footer p {
   font-size:0.74rem;
   font-family: var(--font-data);
 }
+/* --- Selected Work case studies --- */
+.work-section {
+  background: linear-gradient(180deg, var(--hull) 0%, var(--void) 100%);
+  border-top: 1px solid var(--line);
+}
+.case-study {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px 28px 28px 8px;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.case-study::before {
+  content:'';
+  position:absolute; top:0; left:0;
+  width:5px; height:100%;
+  background: linear-gradient(180deg, var(--amber), var(--lavender));
+}
+.cs-head { display:flex; align-items:center; gap:0.7rem; margin-bottom:0.3rem; flex-wrap:wrap; }
+.cs-num {
+  font-family: var(--font-data);
+  font-weight:700; font-size:0.7rem;
+  color: var(--void);
+  background: var(--amber);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.6rem;
+  flex:0 0 auto;
+}
+.cs-head h3 { color: var(--text-bright); font-size:1.12rem; font-weight:800; line-height:1.25; }
+.cs-meta {
+  font-family: var(--font-data);
+  font-size:0.74rem;
+  color: var(--amber);
+  margin-bottom:1.2rem;
+}
+.cs-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0.8rem; margin-bottom:1.1rem; }
+.cs-stat {
+  background: var(--panel-hi);
+  border:1px solid var(--line);
+  border-radius: var(--radius-panel);
+  padding:1.1rem 0.9rem;
+  text-align:center;
+}
+.cs-stat:nth-child(even) { border-radius: var(--radius-panel-alt); }
+.cs-stat .number { font-family:var(--font-data); font-weight:700; font-size:clamp(1.3rem,2.2vw,1.7rem); color:var(--text-bright); line-height:1; margin-bottom:0.35rem; }
+.cs-stat .label { font-family:var(--font-data); color:var(--text-dim); font-size:0.66rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.25rem; }
+.cs-stat .sub { font-family:var(--font-data); font-size:0.64rem; color:var(--teal); }
+.cs-body { color:var(--text); font-size:0.92rem; line-height:1.75; margin-bottom:1.2rem; max-width:860px; }
+.cs-body strong { color:var(--text-bright); }
+.cs-subhead {
+  font-family:var(--font-data);
+  font-size:0.7rem; font-weight:700;
+  letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--lavender);
+  margin-bottom:0.8rem;
+}
+.arch { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1.1fr) auto minmax(0,1fr); gap:0.7rem; align-items:center; margin-bottom:1.2rem; }
+.arch-col { display:flex; flex-direction:column; gap:0.5rem; }
+.arch-node {
+  background: var(--panel-hi);
+  border:1px solid var(--line-lav);
+  border-radius: var(--radius-sm);
+  padding:0.55rem 0.75rem;
+}
+.arch-node h5 { color:var(--text-bright); font-size:0.8rem; font-weight:700; line-height:1.3; }
+.arch-node span { font-family:var(--font-data); font-size:0.62rem; color:var(--text-dim); }
+.arch-hub {
+  background: linear-gradient(135deg, var(--panel-hi), var(--panel));
+  border:1px solid rgba(232,164,53,0.35);
+  border-radius: var(--radius-panel);
+  padding:1.3rem 1rem;
+  text-align:center;
+  box-shadow: var(--shadow-sm);
+}
+.arch-hub h5 { color:var(--amber); font-size:0.95rem; font-weight:800; margin-bottom:0.2rem; }
+.arch-hub span { font-family:var(--font-data); font-size:0.64rem; color:var(--text-dim); line-height:1.5; display:block; }
+.arch-arrow { font-family:var(--font-data); color:var(--amber); font-size:1.2rem; text-align:center; }
+.rev-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0.8rem; }
+.rev-item {
+  background: var(--panel-hi);
+  border:1px solid var(--line);
+  border-radius: var(--radius-panel);
+  padding:1rem 1.1rem;
+}
+.rev-item .pct { font-family:var(--font-data); font-weight:700; font-size:1.5rem; color:var(--amber); line-height:1; margin-bottom:0.3rem; }
+.rev-item h5 { color:var(--text-bright); font-size:0.82rem; font-weight:700; }
+.rev-item span { font-family:var(--font-data); font-size:0.66rem; color:var(--text-dim); }
+.rev-track { height:6px; background:rgba(255,255,255,0.06); border-radius:var(--radius-pill); margin-top:0.55rem; overflow:hidden; }
+.rev-fill { height:100%; border-radius:var(--radius-pill); background:linear-gradient(90deg, var(--amber), var(--lavender)); }
+.ctr-list { display:flex; flex-direction:column; gap:0.5rem; }
+.ctr-row {
+  display:grid;
+  grid-template-columns:100px minmax(0,1fr);
+  gap:0.4rem 1.1rem;
+  align-items:center;
+  background: var(--panel-hi);
+  border:1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding:0.75rem 1rem;
+}
+.ctr-val { font-family:var(--font-data); font-weight:700; font-size:1.2rem; color:var(--teal); }
+.ctr-info h5 { color:var(--text-bright); font-size:0.85rem; font-weight:700; margin-bottom:0.1rem; }
+.ctr-info span { font-family:var(--font-data); font-size:0.66rem; color:var(--text-dim); }
+.cs-footnote { font-family:var(--font-data); font-size:0.7rem; color:var(--text-dim); margin-top:0.4rem; }
+@media (max-width:960px) {
+  .cs-stats { grid-template-columns:1fr 1fr; }
+  .rev-grid { grid-template-columns:1fr; }
+  .arch { grid-template-columns:1fr; }
+  .arch-arrow { transform:rotate(90deg); justify-self:center; }
+}
+@media (max-width:720px) {
+  .cs-stats { grid-template-columns:1fr; }
+  .case-study { padding:1.4rem; }
+  .ctr-row { grid-template-columns:80px minmax(0,1fr); }
+}
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(16px); }
   to { opacity:1; transform:translateY(0); }
@@ -727,6 +844,7 @@ footer p {
     <a class="logo" href="#top">Alex Roncagliolo</a>
     <div class="nav-links">
       <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+      <a href="#work" data-i18n="navWork">Work</a>
       <a href="#ai-experience" data-i18n="navAi">AI + Ops</a>
       <a href="#approach" data-i18n="navApproach">Approach</a>
       <a href="#experience" data-i18n="navExperience">Experience</a>
@@ -750,7 +868,7 @@ footer p {
         <div class="hero-copy">
           <div class="hero-kicker animate" data-i18n="heroEyebrow">Email & Lifecycle Marketing · Marketing Operations · HubSpot Certified</div>
           <h1 class="animate d1" data-i18n="heroHeadline">I build email programs and marketing ops <span>that drive revenue.</span></h1>
-          <p class="subtitle animate d2" data-i18n="heroSubtitle">10+ years building and executing email marketing and lifecycle programs across subscription media, e-commerce, and professional services. Grew an email list from 0 to 11,000+ subscribers and designed segmented campaigns achieving 24–29% open rates and up to 8.08% CTR — 3–4x industry averages. HubSpot certified. Trilingual: English, Spanish, Italian.</p>
+          <p class="subtitle animate d2" data-i18n="heroSubtitle">10+ years building and executing email marketing and lifecycle programs across subscription media, e-commerce, and professional services. Grew an email list from 0 to 2,500+ subscribers and designed segmented campaigns achieving 23%+ open rates and up to 8.08% CTR — 3–4x industry averages. HubSpot certified. Trilingual: English, Spanish, Italian.</p>
           <div class="cta-row animate d3">
             <a href="#contact" class="btn btn-primary" data-i18n="ctaGet">Get in touch</a>
             <a href="#expertise" class="btn btn-outline" data-i18n="ctaSee">See capabilities</a>
@@ -765,10 +883,10 @@ footer p {
   <section class="metrics" aria-label="Key metrics">
     <div class="container">
       <div class="metrics-grid">
-        <div class="metric animate"><div class="number" data-i18n="metricVal1">24–29%</div><div class="label" data-i18n="metricLbl1">Open Rate Range</div></div>
+        <div class="metric animate"><div class="number" data-i18n="metricVal1">23%+</div><div class="label" data-i18n="metricLbl1">Open Rate Range</div></div>
         <div class="metric animate d1"><div class="number" data-i18n="metricVal2">8.08%</div><div class="label" data-i18n="metricLbl2">Peak CTR</div></div>
-        <div class="metric animate d2"><div class="number" data-i18n="metricVal3">11,000+</div><div class="label" data-i18n="metricLbl3">Subscribers Built</div></div>
-        <div class="metric animate d3"><div class="number" data-i18n="metricVal4">$8,955+</div><div class="label" data-i18n="metricLbl4">Lifetime-Tier Revenue</div></div>
+        <div class="metric animate d2"><div class="number" data-i18n="metricVal3">2,500+</div><div class="label" data-i18n="metricLbl3">Subscribers Built</div></div>
+        <div class="metric animate d3"><div class="number" data-i18n="metricVal4">3</div><div class="label" data-i18n="metricLbl4">Revenue Streams</div></div>
       </div>
     </div>
   </section>
@@ -787,7 +905,7 @@ footer p {
         <article class="expertise-card animate d2">
           <div class="card-num">02</div>
           <h3 data-i18n="card2Title">Marketing Operations</h3>
-          <p data-i18n="card2Text">HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), Stripe, SendOwl, Shopify, WordPress — subscription billing, fulfillment, payment ops, and platform coordination.</p>
+          <p data-i18n="card2Text">HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), PayPal, SendOwl, Shopify, WordPress — subscription billing, fulfillment, payment ops, and platform coordination.</p>
         </article>
         <article class="expertise-card animate d3">
           <div class="card-num">03</div>
@@ -812,6 +930,66 @@ footer p {
       </div>
     </div>
   </section>
+  <section id="work" class="work-section">
+    <div class="container">
+      <div class="deco-strip"><span></span><span></span><span></span></div>
+      <div class="section-kicker animate" data-i18n="workKicker">Selected Work</div>
+      <h2 class="section-title animate d1" data-i18n="workTitle">Case studies: systems I've actually built.</h2>
+      <p class="section-intro animate d2" data-i18n="workIntro">Three redacted case studies from a live subscription media business. Client and brand details are confidential; every metric is actual platform-reported data. Full financials available in a live walkthrough.</p>
+      <article class="case-study animate d1">
+        <div class="cs-head"><span class="cs-num">01</span><h3 data-i18n="cs1Title">Email Campaign Performance</h3></div>
+        <div class="cs-meta" data-i18n="cs1Meta">Membership conversion campaign · 2,500+ active contacts · 3 behavioral segments</div>
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="number" data-i18n="cs1s1">2,539</div><div class="label" data-i18n="cs1s1l">Emails Sent</div><div class="sub" data-i18n="cs1s1s">single campaign</div></div>
+          <div class="cs-stat"><div class="number" data-i18n="cs1s2">23.6%</div><div class="label" data-i18n="cs1s2l">Open Rate</div><div class="sub" data-i18n="cs1s2s">+12.1% vs. prior 10 campaigns</div></div>
+          <div class="cs-stat"><div class="number" data-i18n="cs1s3">4.2%</div><div class="label" data-i18n="cs1s3l">Click Rate</div><div class="sub" data-i18n="cs1s3s">+3.3% vs. prior 10 campaigns</div></div>
+          <div class="cs-stat"><div class="number" data-i18n="cs1s4">3</div><div class="label" data-i18n="cs1s4l">List Segments</div><div class="sub" data-i18n="cs1s4s">behavioral targeting</div></div>
+        </div>
+        <p class="cs-body" data-i18n="cs1Note">Industry benchmark for Media &amp; Entertainment (Mailchimp): ~21% open rate / ~2.3% CTR. This campaign beat both benchmarks and outperformed the sender's own 10-campaign average on both opens and clicks.</p>
+      </article>
+      <article class="case-study animate d2">
+        <div class="cs-head"><span class="cs-num">02</span><h3 data-i18n="cs2Title">6-Platform Revenue Attribution System</h3></div>
+        <div class="cs-meta" data-i18n="cs2Meta">Make.com · Google Apps Script · Google Sheets · Real-time multi-source tracking</div>
+        <div class="arch">
+          <div class="arch-col">
+            <div class="arch-node"><h5 data-i18n="archBilling">Subscription Billing</h5><span data-i18n="archWebhooks">Webhooks</span></div>
+            <div class="arch-node"><h5>PayPal</h5><span data-i18n="archWebhooks2">Webhooks</span></div>
+            <div class="arch-node"><h5>SendOwl</h5><span data-i18n="archSendowl">Digital store · Order API</span></div>
+            <div class="arch-node"><h5>Constant Contact</h5><span data-i18n="archCc">Email · Campaign API</span></div>
+            <div class="arch-node"><h5>GA4</h5><span data-i18n="archGa4">Analytics API</span></div>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">&#8594;</div>
+          <div class="arch-hub"><h5>Make.com</h5><span data-i18n="archHub">Router + filter logic · conditional routing</span></div>
+          <div class="arch-arrow" aria-hidden="true">&#8594;</div>
+          <div class="arch-col">
+            <div class="arch-node"><h5>Google Sheets</h5><span data-i18n="archSheets">11-tab dashboard · real-time data store</span></div>
+            <div class="arch-node"><h5>Apps Script</h5><span data-i18n="archScript">Web app · live KPI display</span></div>
+          </div>
+        </div>
+        <p class="cs-body" data-i18n="cs2Auto"><strong>Fully automated across 5 Make.com scenarios &mdash; zero manual data entry.</strong> Every transaction is mapped to source, product type, and marketing channel within seconds, enabling cross-platform ROI analysis across 3 revenue streams.</p>
+        <h4 class="cs-subhead" data-i18n="revTitle">Revenue mix by stream &mdash; year to date</h4>
+        <div class="rev-grid">
+          <div class="rev-item"><div class="pct">55%</div><h5 data-i18n="rev1">Digital Store</h5><span data-i18n="rev1s">Single purchases</span><div class="rev-track"><div class="rev-fill" style="width:55%"></div></div></div>
+          <div class="rev-item"><div class="pct">30%</div><h5 data-i18n="rev2">Subscription Platform</h5><span data-i18n="rev2s">Recurring membership</span><div class="rev-track"><div class="rev-fill" style="width:30%"></div></div></div>
+          <div class="rev-item"><div class="pct">15%</div><h5 data-i18n="rev3">Premium Membership</h5><span data-i18n="rev3s">Lifetime tier</span><div class="rev-track"><div class="rev-fill" style="width:15%"></div></div></div>
+        </div>
+      </article>
+      <article class="case-study animate d3">
+        <div class="cs-head"><span class="cs-num">03</span><h3 data-i18n="cs3Title">AI-Powered Copy Generation &amp; Performance Attribution</h3></div>
+        <div class="cs-meta" data-i18n="cs3Meta">Anthropic API (Claude) · Google Apps Script · Make.com · Closed-loop system</div>
+        <p class="cs-body" data-i18n="cs3Desc">A custom Apps Script web app calls the Anthropic API server-side to generate email copy, X posts, and YouTube titles and descriptions. Every piece receives a unique content_id baked into its UTM parameters &mdash; closed-loop attribution from generation through open, click, and purchase. Built on analysis of 100+ historical campaigns.</p>
+        <h4 class="cs-subhead" data-i18n="ctrTitle">Top performers by click-through rate &mdash; verified from platform data</h4>
+        <div class="ctr-list">
+          <div class="ctr-row"><div class="ctr-val" data-i18n="ctr1v">8.08%</div><div class="ctr-info"><h5 data-i18n="ctr1n">Re-launch / platform migration announcement pattern</h5><span data-i18n="ctr1s">297 sends · highest recorded CTR &mdash; 4x industry average</span></div></div>
+          <div class="ctr-row"><div class="ctr-val" data-i18n="ctr2v">4.21%</div><div class="ctr-info"><h5 data-i18n="ctr2n">Membership access / offer update pattern</h5><span data-i18n="ctr2s">2,539 sends · best large-list CTR</span></div></div>
+          <div class="ctr-row"><div class="ctr-val" data-i18n="ctr3v">3.47%</div><div class="ctr-info"><h5 data-i18n="ctr3n">Research-based / survey subject line pattern</h5><span data-i18n="ctr3s">2,597 sends · strong broad-list performer</span></div></div>
+          <div class="ctr-row"><div class="ctr-val" data-i18n="ctr4v">3.19%</div><div class="ctr-info"><h5 data-i18n="ctr4n">Narrative / story-driven pattern</h5><span data-i18n="ctr4s">2,538 sends · consistently above average</span></div></div>
+          <div class="ctr-row"><div class="ctr-val" data-i18n="ctr5v">3.19%</div><div class="ctr-info"><h5 data-i18n="ctr5n">Account update / membership status pattern</h5><span data-i18n="ctr5s">408 sends · segmented re-engagement list</span></div></div>
+        </div>
+      </article>
+      <p class="cs-footnote animate" data-i18n="csFootnote">All brand names, campaign names, and product titles have been redacted. Metrics reflect actual platform-reported data.</p>
+    </div>
+  </section>
   <section id="ai-experience" class="ai-section">
     <div class="container">
       <div class="section-kicker animate" data-i18n="aiKicker">AI + Operator Judgment</div>
@@ -824,18 +1002,8 @@ footer p {
         </div>
         <aside class="callout animate d3">
           <h3 data-i18n="calloutTitle">Example: AI-powered recommendations engine</h3>
-          <p data-i18n="calloutText">Built an AI recommendations engine that surfaces next-best campaign actions based on performance patterns, recency, and segment behavior — integrated into a live 9-tab operational dashboard.</p>
+          <p data-i18n="calloutText">Built an AI recommendations engine that surfaces next-best campaign actions based on performance patterns, recency, and segment behavior — integrated into a live 11-tab operational dashboard.</p>
         </aside>
-      </div>
-      <div class="featured-project animate d2">
-        <h3 data-i18n="projTitle">Marketing Intelligence Dashboard — 6-Platform Automation Build</h3>
-        <div class="proj-tools" data-i18n="projTools">Google Sheets · Make.com · Google Apps Script · 2026</div>
-        <ul>
-          <li data-i18n="proj1">Designed and built a live reporting system consolidating data from 6 platforms (Stripe, PayPal, Constant Contact, GA4, CCBill, SendOwl) into a single 9-tab operational dashboard.</li>
-          <li data-i18n="proj2">Engineered 5 Make.com automation scenarios — eliminating all manual data entry and enabling real-time performance monitoring.</li>
-          <li data-i18n="proj3">Built revenue attribution logic mapping every transaction to source, product type, and marketing channel — enabling cross-platform ROI analysis across 3 revenue streams for the first time.</li>
-          <li data-i18n="proj4">Analyzed 100+ historical email campaigns, identifying subject-line patterns (relaunch announcements: 8.08% CTR; access-update framing: 4.21% CTR) and segmentation strategies correlated with 3x higher engagement vs. baseline.</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -879,7 +1047,7 @@ footer p {
           <div class="tl-content">
             <h3 data-i18n="exp1Title">Email Marketing & Operations Manager</h3>
             <div class="org" data-i18n="exp1Org">Subscription Media & E-Commerce · Remote / San Fernando Valley, CA</div>
-            <p data-i18n="exp1Text">Grew email subscriber base from 0 to 11,000+. Execute segmented campaigns achieving 24–29% open rates and up to 8.08% CTR — 3–4x industry benchmarks. Designed lifecycle flows converting trial subscribers to a $995 high-ticket membership, generating $8,955+ in lifetime-tier revenue. Architect subscription pricing across 3 properties including monthly streaming, single downloads, bundles, and lifetime VIP tier.</p>
+            <p data-i18n="exp1Text">Grew email subscriber base from 0 to 2,500+. Execute segmented campaigns achieving 23%+ open rates and up to 8.08% CTR — 3–4x industry benchmarks. Designed lifecycle flows that increased trial-to-paid conversion into a premium high-ticket membership tier. Architect subscription pricing across 3 properties including monthly streaming, single downloads, bundles, and lifetime VIP tier.</p>
           </div>
         </div>
         <div class="timeline-item animate d2">
@@ -993,17 +1161,17 @@ const translations = {
     "navExpertise":"Expertise","navAi":"AI + Ops","navApproach":"Approach","navExperience":"Experience","navCredentials":"Credentials","navContact":"Contact",
     "heroEyebrow":"Email & Lifecycle Marketing · Marketing Operations · HubSpot Certified",
     "heroHeadline":"I build email programs and marketing ops <span>that drive revenue.</span>",
-    "heroSubtitle":"10+ years building and executing email marketing and lifecycle programs across subscription media, e-commerce, and professional services. Grew an email list from 0 to 11,000+ subscribers and designed segmented campaigns achieving 24–29% open rates and up to 8.08% CTR — 3–4x industry averages. HubSpot certified. Trilingual: English, Spanish, Italian.",
+    "heroSubtitle":"10+ years building and executing email marketing and lifecycle programs across subscription media, e-commerce, and professional services. Grew an email list from 0 to 2,500+ subscribers and designed segmented campaigns achieving 23%+ open rates and up to 8.08% CTR — 3–4x industry averages. HubSpot certified. Trilingual: English, Spanish, Italian.",
     "ctaGet":"Get in touch","ctaSee":"See capabilities",
-    "metricVal1":"24–29%","metricLbl1":"Open Rate Range",
+    "metricVal1":"23%+","metricLbl1":"Open Rate Range",
     "metricVal2":"8.08%","metricLbl2":"Peak CTR",
-    "metricVal3":"11,000+","metricLbl3":"Subscribers Built",
-    "metricVal4":"$8,955+","metricLbl4":"Lifetime-Tier Revenue",
+    "metricVal3":"2,500+","metricLbl3":"Subscribers Built",
+    "metricVal4":"3","metricLbl4":"Revenue Streams",
     "whatKicker":"Core Competencies",
     "whatTitle":"Full-stack email marketing with an operator's mindset.",
     "whatIntro":"I don't just plan strategy — I've built and operated the systems behind campaign execution, revenue attribution, customer support, and content production. That makes me useful where marketing, ops, and customer experience need to work together.",
     "card1Title":"Email & Lifecycle Marketing","card1Text":"Segmented campaign strategy, lifecycle flows (onboarding, conversion, retention, win-back), A/B testing, deliverability management, list hygiene, and conversion funnel optimization.",
-    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), Stripe, SendOwl, Shopify, WordPress — subscription billing, fulfillment, payment ops, and platform coordination.",
+    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), PayPal, SendOwl, Shopify, WordPress — subscription billing, fulfillment, payment ops, and platform coordination.",
     "card3Title":"Analytics & Revenue Attribution","card3Text":"GA4, Google Sheets, Google Apps Script, revenue attribution dashboards, campaign KPI reporting, calculated metrics, and cross-platform ROI analysis across multiple revenue streams.",
     "card4Title":"AI-Assisted Workflow Automation","card4Text":"Claude, ChatGPT, Make.com, and Google Apps Script workflows for reporting, content generation, attribution tracking, campaign recommendations, and repeatable operating systems.",
     "card5Title":"E-Commerce Operations","card5Text":"Subscription pricing architecture, checkout workflows, digital fulfillment, payment troubleshooting, bundle and tier optimization, and multi-property revenue management.",
@@ -1014,13 +1182,45 @@ const translations = {
     "aiP2":"<strong>The value is not just prompting.</strong> The value is knowing the business problem well enough to guide the tool, catch bad assumptions, validate the data, and redirect the workflow when a technically plausible answer isn't actually deployable.",
     "aiP3":"This is especially useful in email marketing and marketing ops environments where creative, technical, customer, and reporting issues overlap constantly.",
     "calloutTitle":"Example: AI-powered recommendations engine",
-    "calloutText":"Built an AI recommendations engine that surfaces next-best campaign actions based on performance patterns, recency, and segment behavior — integrated into a live 9-tab operational dashboard.",
+    "calloutText":"Built an AI recommendations engine that surfaces next-best campaign actions based on performance patterns, recency, and segment behavior — integrated into a live 11-tab operational dashboard.",
     "projTitle":"Marketing Intelligence Dashboard — 6-Platform Automation Build",
     "projTools":"Google Sheets · Make.com · Google Apps Script · 2026",
-    "proj1":"Designed and built a live reporting system consolidating data from 6 platforms (Stripe, PayPal, Constant Contact, GA4, CCBill, SendOwl) into a single 9-tab operational dashboard.",
+    "proj1":"Designed and built a live reporting system consolidating data from 6 platforms (PayPal, Constant Contact, GA4, SendOwl, Anthropic API) into a single 11-tab operational dashboard.",
     "proj2":"Engineered 5 Make.com automation scenarios — eliminating all manual data entry and enabling real-time performance monitoring.",
     "proj3":"Built revenue attribution logic mapping every transaction to source, product type, and marketing channel — enabling cross-platform ROI analysis across 3 revenue streams for the first time.",
     "proj4":"Analyzed 100+ historical email campaigns, identifying subject-line patterns (relaunch announcements: 8.08% CTR; access-update framing: 4.21% CTR) and segmentation strategies correlated with 3x higher engagement vs. baseline.",
+    "navWork":"Work",
+    "workKicker":"Selected Work",
+    "workTitle":"Case studies: systems I've actually built.",
+    "workIntro":"Three redacted case studies from a live subscription media business. Client and brand details are confidential; every metric is actual platform-reported data. Full financials available in a live walkthrough.",
+    "cs1Title":"Email Campaign Performance",
+    "cs1Meta":"Membership conversion campaign · 2,500+ active contacts · 3 behavioral segments",
+    "cs1s1":"2,539","cs1s1l":"Emails Sent","cs1s1s":"single campaign",
+    "cs1s2":"23.6%","cs1s2l":"Open Rate","cs1s2s":"+12.1% vs. prior 10 campaigns",
+    "cs1s3":"4.2%","cs1s3l":"Click Rate","cs1s3s":"+3.3% vs. prior 10 campaigns",
+    "cs1s4":"3","cs1s4l":"List Segments","cs1s4s":"behavioral targeting",
+    "cs1Note":"Industry benchmark for Media &amp; Entertainment (Mailchimp): ~21% open rate / ~2.3% CTR. This campaign beat both benchmarks and outperformed the sender's own 10-campaign average on both opens and clicks.",
+    "cs2Title":"6-Platform Revenue Attribution System",
+    "cs2Meta":"Make.com · Google Apps Script · Google Sheets · Real-time multi-source tracking",
+    "archBilling":"Subscription Billing","archWebhooks":"Webhooks","archWebhooks2":"Webhooks",
+    "archSendowl":"Digital store · Order API","archCc":"Email · Campaign API","archGa4":"Analytics API",
+    "archHub":"Router + filter logic · conditional routing",
+    "archSheets":"11-tab dashboard · real-time data store","archScript":"Web app · live KPI display",
+    "cs2Auto":"<strong>Fully automated across 5 Make.com scenarios — zero manual data entry.</strong> Every transaction is mapped to source, product type, and marketing channel within seconds, enabling cross-platform ROI analysis across 3 revenue streams.",
+    "revTitle":"Revenue mix by stream — year to date",
+    "rev1":"Digital Store","rev1s":"Single purchases",
+    "rev2":"Subscription Platform","rev2s":"Recurring membership",
+    "rev3":"Premium Membership","rev3s":"Lifetime tier",
+    "cs3Title":"AI-Powered Copy Generation &amp; Performance Attribution",
+    "cs3Meta":"Anthropic API (Claude) · Google Apps Script · Make.com · Closed-loop system",
+    "cs3Desc":"A custom Apps Script web app calls the Anthropic API server-side to generate email copy, X posts, and YouTube titles and descriptions. Every piece receives a unique content_id baked into its UTM parameters — closed-loop attribution from generation through open, click, and purchase. Built on analysis of 100+ historical campaigns.",
+    "ctrTitle":"Top performers by click-through rate — verified from platform data",
+    "ctr1v":"8.08%","ctr1n":"Re-launch / platform migration announcement pattern","ctr1s":"297 sends · highest recorded CTR — 4x industry average",
+    "ctr2v":"4.21%","ctr2n":"Membership access / offer update pattern","ctr2s":"2,539 sends · best large-list CTR",
+    "ctr3v":"3.47%","ctr3n":"Research-based / survey subject line pattern","ctr3s":"2,597 sends · strong broad-list performer",
+    "ctr4v":"3.19%","ctr4n":"Narrative / story-driven pattern","ctr4s":"2,538 sends · consistently above average",
+    "ctr5v":"3.19%","ctr5n":"Account update / membership status pattern","ctr5s":"408 sends · segmented re-engagement list",
+    "csFootnote":"All brand names, campaign names, and product titles have been redacted. Metrics reflect actual platform-reported data.",
     "approachKicker":"How I Work","approachTitle":"Practical systems over noise.",
     "approachIntro":"I'm strongest in environments where the goal isn't more activity, but better coordination, cleaner execution, and clearer customer paths.",
     "approach1Title":"Revenue over activity","approach1Text":"More campaigns aren't better unless they move the right customer behavior. I focus on meaningful conversion events, not busywork.",
@@ -1029,7 +1229,7 @@ const translations = {
     "approach4Title":"Calm customer experience","approach4Text":"Strong operations include human communication. I handle difficult conversations with empathy, clarity, and a solution-focused tone.",
     "experienceKicker":"Experience","experienceTitle":"Built from hands-on ownership.",
     "exp1Title":"Email Marketing & Operations Manager","exp1Org":"Subscription Media & E-Commerce · Remote / San Fernando Valley, CA",
-    "exp1Text":"Grew email subscriber base from 0 to 11,000+. Execute segmented campaigns achieving 24–29% open rates and up to 8.08% CTR — 3–4x industry benchmarks. Designed lifecycle flows converting trial subscribers to a $995 high-ticket membership, generating $8,955+ in lifetime-tier revenue. Architect subscription pricing across 3 properties including monthly streaming, single downloads, bundles, and lifetime VIP tier.",
+    "exp1Text":"Grew email subscriber base from 0 to 2,500+. Execute segmented campaigns achieving 23%+ open rates and up to 8.08% CTR — 3–4x industry benchmarks. Designed lifecycle flows that increased trial-to-paid conversion into a premium high-ticket membership tier. Architect subscription pricing across 3 properties including monthly streaming, single downloads, bundles, and lifetime VIP tier.",
     "exp2Title":"Freelance Video Editor & AI Media Specialist","exp2Org":"Contract — Dr. S. Smith",
     "exp2Text":"Edited slide-based video content in Final Cut Pro and delivered broadcast-ready files. Upscaled source images to 4K using Topaz AI. Managed YouTube publishing workflow. Configured Microsoft 365 and Teams environments for client operations.",
     "exp3Title":"Founder — B2B Referral Network & DTC E-Commerce","exp3Org":"Wix · Shopify · Meta Ads",
@@ -1051,17 +1251,17 @@ const translations = {
     "navExpertise":"Competencias","navAi":"IA + Ops","navApproach":"Enfoque","navExperience":"Experiencia","navCredentials":"Credenciales","navContact":"Contacto",
     "heroEyebrow":"Email & Lifecycle Marketing · Marketing Operations · Certificado HubSpot",
     "heroHeadline":"Construyo programas de email y marketing ops <span>que generan ingresos.</span>",
-    "heroSubtitle":"10+ años construyendo y ejecutando programas de email marketing y lifecycle en medios por suscripción, e-commerce y servicios profesionales. Crecí una lista de email de 0 a 11,000+ suscriptores y diseñé campañas segmentadas logrando 24–29% de apertura y hasta 8.08% CTR — 3–4x los promedios de la industria. Certificado HubSpot. Trilingüe: inglés, español, italiano.",
+    "heroSubtitle":"10+ años construyendo y ejecutando programas de email marketing y lifecycle en medios por suscripción, e-commerce y servicios profesionales. Crecí una lista de email de 0 a 2,500+ suscriptores y diseñé campañas segmentadas logrando 23%+ de apertura y hasta 8.08% CTR — 3–4x los promedios de la industria. Certificado HubSpot. Trilingüe: inglés, español, italiano.",
     "ctaGet":"Contáctame","ctaSee":"Ver competencias",
-    "metricVal1":"24–29%","metricLbl1":"Rango de Apertura",
+    "metricVal1":"23%+","metricLbl1":"Rango de Apertura",
     "metricVal2":"8.08%","metricLbl2":"CTR Máximo",
-    "metricVal3":"11,000+","metricLbl3":"Suscriptores Creados",
-    "metricVal4":"$8,955+","metricLbl4":"Ingresos Tier Lifetime",
+    "metricVal3":"2,500+","metricLbl3":"Suscriptores Creados",
+    "metricVal4":"3","metricLbl4":"Flujos de Ingresos",
     "whatKicker":"Competencias Clave",
     "whatTitle":"Email marketing full-stack con mentalidad de operador.",
     "whatIntro":"No solo planifico estrategia — he construido y operado los sistemas detrás de la ejecución de campañas, atribución de ingresos, soporte al cliente y producción de contenido. Eso me hace útil donde marketing, ops y experiencia del cliente necesitan trabajar juntos.",
     "card1Title":"Email & Lifecycle Marketing","card1Text":"Estrategia de campañas segmentadas, flujos de lifecycle (onboarding, conversión, retención, win-back), A/B testing, gestión de entregabilidad, higiene de listas y optimización de funnels.",
-    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), Stripe, SendOwl, Shopify, WordPress — billing, fulfillment, ops de pagos y coordinación de plataformas.",
+    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), PayPal, SendOwl, Shopify, WordPress — billing, fulfillment, ops de pagos y coordinación de plataformas.",
     "card3Title":"Analytics y Atribución de Ingresos","card3Text":"GA4, Google Sheets, Google Apps Script, dashboards de atribución, reportes de KPIs, métricas calculadas y análisis de ROI cross-platform.",
     "card4Title":"Automatización con IA","card4Text":"Claude, ChatGPT, Make.com y Google Apps Script para reportes, generación de contenido, tracking de atribución, recomendaciones de campañas y sistemas operativos repetibles.",
     "card5Title":"Operaciones de E-Commerce","card5Text":"Arquitectura de precios por suscripción, flujos de checkout, fulfillment digital, resolución de pagos, optimización de bundles y gestión de ingresos multi-propiedad.",
@@ -1072,13 +1272,45 @@ const translations = {
     "aiP2":"<strong>El valor no es solo hacer prompts.</strong> El valor es entender el problema de negocio para guiar la herramienta, detectar suposiciones erróneas, validar datos y redirigir el workflow cuando una respuesta técnicamente plausible no es realmente ejecutable.",
     "aiP3":"Esto es especialmente útil en entornos de email marketing y marketing ops donde temas creativos, técnicos, de clientes y reportes se cruzan constantemente.",
     "calloutTitle":"Ejemplo: Motor de recomendaciones con IA",
-    "calloutText":"Construí un motor de recomendaciones con IA que sugiere las mejores acciones de campaña basándose en patrones de rendimiento, recencia y comportamiento de segmentos — integrado en un dashboard operativo de 9 pestañas.",
+    "calloutText":"Construí un motor de recomendaciones con IA que sugiere las mejores acciones de campaña basándose en patrones de rendimiento, recencia y comportamiento de segmentos — integrado en un dashboard operativo de 11 pestañas.",
     "projTitle":"Dashboard de Inteligencia de Marketing — Automatización de 6 Plataformas",
     "projTools":"Google Sheets · Make.com · Google Apps Script · 2026",
-    "proj1":"Diseñé y construí un sistema de reportes en vivo consolidando datos de 6 plataformas (Stripe, PayPal, Constant Contact, GA4, CCBill, SendOwl) en un dashboard operativo de 9 pestañas.",
+    "proj1":"Diseñé y construí un sistema de reportes en vivo consolidando datos de 6 plataformas (PayPal, Constant Contact, GA4, SendOwl, Anthropic API) en un dashboard operativo de 11 pestañas.",
     "proj2":"Ingeniería de 5 escenarios de automatización Make.com — eliminando toda entrada manual de datos y habilitando monitoreo de rendimiento en tiempo real.",
     "proj3":"Construí lógica de atribución de ingresos mapeando cada transacción a fuente, tipo de producto y canal de marketing — habilitando análisis de ROI cross-platform en 3 flujos de ingresos por primera vez.",
     "proj4":"Analicé 100+ campañas de email históricas, identificando patrones de subject line (relanzamientos: 8.08% CTR; framing de acceso: 4.21% CTR) y estrategias de segmentación correlacionadas con 3x mayor engagement vs. baseline.",
+    "navWork":"Proyectos",
+    "workKicker":"Trabajo Seleccionado",
+    "workTitle":"Casos de estudio: sistemas que realmente construí.",
+    "workIntro":"Tres casos de estudio redactados de un negocio de medios por suscripción en operación. Los detalles de cliente y marca son confidenciales; cada métrica es dato real reportado por plataforma. Finanzas completas disponibles en un walkthrough en vivo.",
+    "cs1Title":"Rendimiento de Campaña de Email",
+    "cs1Meta":"Campaña de conversión a membresía · 2,500+ contactos activos · 3 segmentos conductuales",
+    "cs1s1":"2,539","cs1s1l":"Emails Enviados","cs1s1s":"campaña única",
+    "cs1s2":"23.6%","cs1s2l":"Tasa de Apertura","cs1s2s":"+12.1% vs. 10 campañas previas",
+    "cs1s3":"4.2%","cs1s3l":"Tasa de Clics","cs1s3s":"+3.3% vs. 10 campañas previas",
+    "cs1s4":"3","cs1s4l":"Segmentos de Lista","cs1s4s":"targeting conductual",
+    "cs1Note":"Benchmark de la industria para Media &amp; Entertainment (Mailchimp): ~21% apertura / ~2.3% CTR. Esta campaña superó ambos benchmarks y el promedio propio de 10 campañas en aperturas y clics.",
+    "cs2Title":"Sistema de Atribución de Ingresos de 6 Plataformas",
+    "cs2Meta":"Make.com · Google Apps Script · Google Sheets · Tracking multi-fuente en tiempo real",
+    "archBilling":"Billing de Suscripción","archWebhooks":"Webhooks","archWebhooks2":"Webhooks",
+    "archSendowl":"Tienda digital · Order API","archCc":"Email · Campaign API","archGa4":"Analytics API",
+    "archHub":"Router + lógica de filtros · enrutamiento condicional",
+    "archSheets":"Dashboard de 11 pestañas · datos en tiempo real","archScript":"Web app · KPIs en vivo",
+    "cs2Auto":"<strong>Totalmente automatizado con 5 escenarios de Make.com — cero entrada manual de datos.</strong> Cada transacción se mapea a fuente, tipo de producto y canal de marketing en segundos, habilitando análisis de ROI cross-platform en 3 flujos de ingresos.",
+    "revTitle":"Mix de ingresos por flujo — año a la fecha",
+    "rev1":"Tienda Digital","rev1s":"Compras individuales",
+    "rev2":"Plataforma de Suscripción","rev2s":"Membresía recurrente",
+    "rev3":"Membresía Premium","rev3s":"Nivel lifetime",
+    "cs3Title":"Generación de Copy con IA y Atribución de Rendimiento",
+    "cs3Meta":"Anthropic API (Claude) · Google Apps Script · Make.com · Sistema closed-loop",
+    "cs3Desc":"Una web app personalizada en Apps Script llama a la Anthropic API del lado del servidor para generar copy de email, posts de X y títulos y descripciones de YouTube. Cada pieza recibe un content_id único integrado en sus parámetros UTM — atribución closed-loop desde la generación hasta apertura, clic y compra. Construido sobre el análisis de 100+ campañas históricas.",
+    "ctrTitle":"Mejores resultados por CTR — verificados con datos de plataforma",
+    "ctr1v":"8.08%","ctr1n":"Patrón de relanzamiento / anuncio de migración de plataforma","ctr1s":"297 envíos · CTR más alto registrado — 4x el promedio de la industria",
+    "ctr2v":"4.21%","ctr2n":"Patrón de acceso a membresía / actualización de oferta","ctr2s":"2,539 envíos · mejor CTR en lista grande",
+    "ctr3v":"3.47%","ctr3n":"Patrón de subject line basado en investigación / encuesta","ctr3s":"2,597 envíos · sólido en lista amplia",
+    "ctr4v":"3.19%","ctr4n":"Patrón narrativo / storytelling","ctr4s":"2,538 envíos · consistentemente sobre el promedio",
+    "ctr5v":"3.19%","ctr5n":"Patrón de actualización de cuenta / estado de membresía","ctr5s":"408 envíos · lista segmentada de re-engagement",
+    "csFootnote":"Todos los nombres de marca, campañas y productos han sido redactados. Las métricas reflejan datos reales reportados por plataforma.",
     "approachKicker":"Cómo Trabajo","approachTitle":"Sistemas prácticos por encima del ruido.",
     "approachIntro":"Soy más fuerte en entornos donde el objetivo no es más actividad, sino mejor coordinación, ejecución más limpia y caminos de cliente más claros.",
     "approach1Title":"Ingresos sobre actividad","approach1Text":"Más campañas no son mejores si no mueven el comportamiento correcto del cliente. Me enfoco en eventos de conversión significativos.",
@@ -1087,7 +1319,7 @@ const translations = {
     "approach4Title":"Experiencia del cliente calmada","approach4Text":"Las buenas operaciones incluyen comunicación humana. Manejo conversaciones difíciles con empatía, claridad y un tono enfocado en soluciones.",
     "experienceKicker":"Experiencia","experienceTitle":"Construido desde ownership práctica.",
     "exp1Title":"Email Marketing & Operations Manager","exp1Org":"Medios por Suscripción & E-Commerce · Remoto / San Fernando Valley, CA",
-    "exp1Text":"Crecí la base de suscriptores de 0 a 11,000+. Ejecuto campañas segmentadas logrando 24–29% de apertura y hasta 8.08% CTR — 3–4x benchmarks de la industria. Diseñé flujos de lifecycle convirtiendo suscriptores trial a una membresía high-ticket de $995, generando $8,955+ en ingresos de tier lifetime. Arquitecto de precios en 3 propiedades.",
+    "exp1Text":"Crecí la base de suscriptores de 0 a 2,500+. Ejecuto campañas segmentadas logrando 23%+ de apertura y hasta 8.08% CTR — 3–4x benchmarks de la industria. Diseñé flujos de lifecycle que aumentaron la conversión de prueba a pago hacia un nivel de membresía premium de alto valor. Arquitecto de precios en 3 propiedades.",
     "exp2Title":"Editor de Video Freelance & Especialista en Medios IA","exp2Org":"Contrato — Dr. S. Smith",
     "exp2Text":"Edité contenido de video en Final Cut Pro y entregué archivos broadcast-ready. Upscaling a 4K con Topaz AI. Gestión de workflow de publicación en YouTube. Configuré entornos Microsoft 365 y Teams.",
     "exp3Title":"Fundador — Red de Referidos B2B & E-Commerce DTC","exp3Org":"Wix · Shopify · Meta Ads",
@@ -1109,17 +1341,17 @@ const translations = {
     "navExpertise":"Competenze","navAi":"IA + Ops","navApproach":"Approccio","navExperience":"Esperienza","navCredentials":"Credenziali","navContact":"Contatto",
     "heroEyebrow":"Email & Lifecycle Marketing · Marketing Operations · Certificato HubSpot",
     "heroHeadline":"Costruisco programmi email e marketing ops <span>che generano ricavi.</span>",
-    "heroSubtitle":"10+ anni di esperienza nella costruzione e esecuzione di programmi di email marketing e lifecycle in media in abbonamento, e-commerce e servizi professionali. Ho cresciuto una lista email da 0 a 11.000+ iscritti e progettato campagne segmentate con 24–29% di apertura e fino a 8,08% CTR — 3–4x le medie del settore. Certificato HubSpot. Trilingue: inglese, spagnolo, italiano.",
+    "heroSubtitle":"10+ anni di esperienza nella costruzione e esecuzione di programmi di email marketing e lifecycle in media in abbonamento, e-commerce e servizi professionali. Ho cresciuto una lista email da 0 a 2.500+ iscritti e progettato campagne segmentate con 23%+ di apertura e fino a 8,08% CTR — 3–4x le medie del settore. Certificato HubSpot. Trilingue: inglese, spagnolo, italiano.",
     "ctaGet":"Contattami","ctaSee":"Vedi competenze",
-    "metricVal1":"24–29%","metricLbl1":"Range Apertura",
+    "metricVal1":"23%+","metricLbl1":"Range Apertura",
     "metricVal2":"8,08%","metricLbl2":"CTR Massimo",
-    "metricVal3":"11.000+","metricLbl3":"Iscritti Costruiti",
-    "metricVal4":"$8.955+","metricLbl4":"Ricavi Tier Lifetime",
+    "metricVal3":"2.500+","metricLbl3":"Iscritti Costruiti",
+    "metricVal4":"3","metricLbl4":"Flussi di Ricavo",
     "whatKicker":"Competenze Chiave",
     "whatTitle":"Email marketing full-stack con mentalità da operatore.",
     "whatIntro":"Non mi limito a pianificare strategia — ho costruito e gestito i sistemi dietro l'esecuzione campagne, l'attribuzione ricavi, il supporto clienti e la produzione contenuti. Questo mi rende utile dove marketing, ops e customer experience devono lavorare insieme.",
     "card1Title":"Email & Lifecycle Marketing","card1Text":"Strategia campagne segmentate, flussi lifecycle (onboarding, conversione, retention, win-back), A/B testing, gestione deliverability, igiene liste e ottimizzazione funnel.",
-    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), Stripe, SendOwl, Shopify, WordPress — billing, fulfillment, ops pagamenti e coordinamento piattaforme.",
+    "card2Title":"Marketing Operations","card2Text":"HubSpot, Constant Contact, Mailchimp, Make.com (webhooks/API), PayPal, SendOwl, Shopify, WordPress — billing, fulfillment, ops pagamenti e coordinamento piattaforme.",
     "card3Title":"Analytics e Attribuzione Ricavi","card3Text":"GA4, Google Sheets, Google Apps Script, dashboard attribuzione, report KPI, metriche calcolate e analisi ROI cross-platform su più flussi di ricavi.",
     "card4Title":"Automazione Workflow con IA","card4Text":"Claude, ChatGPT, Make.com e Google Apps Script per reporting, generazione contenuti, tracking attribuzione, raccomandazioni campagne e sistemi operativi ripetibili.",
     "card5Title":"Operazioni E-Commerce","card5Text":"Architettura pricing in abbonamento, flussi checkout, fulfillment digitale, risoluzione pagamenti, ottimizzazione bundle e gestione ricavi multi-proprietà.",
@@ -1130,13 +1362,45 @@ const translations = {
     "aiP2":"<strong>Il valore non è solo fare prompt.</strong> Il valore è conoscere abbastanza il problema di business per guidare lo strumento, individuare assunzioni sbagliate, validare i dati e reindirizzare il workflow quando una risposta tecnicamente plausibile non è davvero implementabile.",
     "aiP3":"Particolarmente utile in ambienti email marketing e marketing ops dove temi creativi, tecnici, customer e reporting si sovrappongono costantemente.",
     "calloutTitle":"Esempio: Motore di raccomandazioni con IA",
-    "calloutText":"Ho costruito un motore di raccomandazioni IA che suggerisce le migliori azioni campagna basandosi su pattern di performance, recenza e comportamento dei segmenti — integrato in un dashboard operativo da 9 tab.",
+    "calloutText":"Ho costruito un motore di raccomandazioni IA che suggerisce le migliori azioni campagna basandosi su pattern di performance, recenza e comportamento dei segmenti — integrato in un dashboard operativo da 11 tab.",
     "projTitle":"Dashboard Intelligence Marketing — Automazione 6 Piattaforme",
     "projTools":"Google Sheets · Make.com · Google Apps Script · 2026",
-    "proj1":"Progettato e costruito un sistema di reporting live che consolida dati da 6 piattaforme (Stripe, PayPal, Constant Contact, GA4, CCBill, SendOwl) in un unico dashboard operativo da 9 tab.",
+    "proj1":"Progettato e costruito un sistema di reporting live che consolida dati da 6 piattaforme (PayPal, Constant Contact, GA4, SendOwl, Anthropic API) in un unico dashboard operativo da 11 tab.",
     "proj2":"Ingegnerizzati 5 scenari di automazione Make.com — eliminando ogni inserimento manuale dati e abilitando monitoraggio performance in tempo reale.",
     "proj3":"Costruita logica di attribuzione ricavi che mappa ogni transazione a sorgente, tipo prodotto e canale marketing — abilitando analisi ROI cross-platform su 3 flussi di ricavi per la prima volta.",
     "proj4":"Analizzate 100+ campagne email storiche, identificando pattern subject line (rilanci: 8,08% CTR; framing accesso: 4,21% CTR) e strategie di segmentazione correlate con 3x engagement superiore vs. baseline.",
+    "navWork":"Progetti",
+    "workKicker":"Lavori Selezionati",
+    "workTitle":"Case study: sistemi che ho davvero costruito.",
+    "workIntro":"Tre case study redatti da un business di media in abbonamento attivo. I dettagli di cliente e brand sono confidenziali; ogni metrica è un dato reale riportato dalle piattaforme. Dati finanziari completi disponibili in un walkthrough dal vivo.",
+    "cs1Title":"Performance Campagna Email",
+    "cs1Meta":"Campagna di conversione membership · 2.500+ contatti attivi · 3 segmenti comportamentali",
+    "cs1s1":"2.539","cs1s1l":"Email Inviate","cs1s1s":"campagna singola",
+    "cs1s2":"23,6%","cs1s2l":"Tasso di Apertura","cs1s2s":"+12,1% vs. 10 campagne precedenti",
+    "cs1s3":"4,2%","cs1s3l":"Tasso di Clic","cs1s3s":"+3,3% vs. 10 campagne precedenti",
+    "cs1s4":"3","cs1s4l":"Segmenti Lista","cs1s4s":"targeting comportamentale",
+    "cs1Note":"Benchmark di settore Media &amp; Entertainment (Mailchimp): ~21% apertura / ~2,3% CTR. Questa campagna ha superato entrambi i benchmark e la media delle proprie 10 campagne precedenti su aperture e clic.",
+    "cs2Title":"Sistema di Attribuzione Ricavi a 6 Piattaforme",
+    "cs2Meta":"Make.com · Google Apps Script · Google Sheets · Tracking multi-sorgente in tempo reale",
+    "archBilling":"Billing Abbonamenti","archWebhooks":"Webhooks","archWebhooks2":"Webhooks",
+    "archSendowl":"Store digitale · Order API","archCc":"Email · Campaign API","archGa4":"Analytics API",
+    "archHub":"Router + logica filtri · routing condizionale",
+    "archSheets":"Dashboard 11 tab · data store in tempo reale","archScript":"Web app · KPI live",
+    "cs2Auto":"<strong>Completamente automatizzato con 5 scenari Make.com — zero inserimento manuale dati.</strong> Ogni transazione viene mappata a sorgente, tipo prodotto e canale marketing in pochi secondi, abilitando analisi ROI cross-platform su 3 flussi di ricavo.",
+    "revTitle":"Mix ricavi per flusso — anno in corso",
+    "rev1":"Store Digitale","rev1s":"Acquisti singoli",
+    "rev2":"Piattaforma in Abbonamento","rev2s":"Membership ricorrente",
+    "rev3":"Membership Premium","rev3s":"Livello lifetime",
+    "cs3Title":"Generazione Copy con IA e Attribuzione Performance",
+    "cs3Meta":"Anthropic API (Claude) · Google Apps Script · Make.com · Sistema closed-loop",
+    "cs3Desc":"Una web app custom in Apps Script chiama l'Anthropic API lato server per generare copy email, post X e titoli e descrizioni YouTube. Ogni contenuto riceve un content_id unico integrato nei parametri UTM — attribuzione closed-loop dalla generazione fino ad apertura, clic e acquisto. Costruito sull'analisi di 100+ campagne storiche.",
+    "ctrTitle":"Migliori risultati per CTR — verificati da dati piattaforma",
+    "ctr1v":"8,08%","ctr1n":"Pattern rilancio / annuncio migrazione piattaforma","ctr1s":"297 invii · CTR più alto registrato — 4x la media di settore",
+    "ctr2v":"4,21%","ctr2n":"Pattern accesso membership / aggiornamento offerta","ctr2s":"2.539 invii · miglior CTR su lista grande",
+    "ctr3v":"3,47%","ctr3n":"Pattern subject line basata su ricerca / sondaggio","ctr3s":"2.597 invii · solido su lista ampia",
+    "ctr4v":"3,19%","ctr4n":"Pattern narrativo / storytelling","ctr4s":"2.538 invii · costantemente sopra la media",
+    "ctr5v":"3,19%","ctr5n":"Pattern aggiornamento account / stato membership","ctr5s":"408 invii · lista segmentata re-engagement",
+    "csFootnote":"Tutti i nomi di brand, campagne e prodotti sono stati redatti. Le metriche riflettono dati reali riportati dalle piattaforme.",
     "approachKicker":"Come Lavoro","approachTitle":"Sistemi pratici invece del rumore.",
     "approachIntro":"Do il meglio in ambienti dove l'obiettivo non è più attività, ma migliore coordinamento, esecuzione più pulita e percorsi cliente più chiari.",
     "approach1Title":"Ricavi prima dell'attività","approach1Text":"Più campagne non sono migliori se non muovono il comportamento giusto. Mi concentro su eventi di conversione significativi.",
@@ -1145,7 +1409,7 @@ const translations = {
     "approach4Title":"Customer experience calma","approach4Text":"Le operations solide includono comunicazione umana. Gestisco conversazioni difficili con empatia, chiarezza e tono orientato alla soluzione.",
     "experienceKicker":"Esperienza","experienceTitle":"Costruito attraverso ownership pratica.",
     "exp1Title":"Email Marketing & Operations Manager","exp1Org":"Media in Abbonamento & E-Commerce · Remoto / San Fernando Valley, CA",
-    "exp1Text":"Cresciuta base iscritti da 0 a 11.000+. Eseguo campagne segmentate con 24–29% apertura e fino a 8,08% CTR — 3–4x benchmark settore. Progettati flussi lifecycle che convertono trial a membership high-ticket da $995, generando $8.955+ in ricavi tier lifetime. Architetto pricing su 3 proprietà.",
+    "exp1Text":"Cresciuta base iscritti da 0 a 2.500+. Eseguo campagne segmentate con 23%+ apertura e fino a 8,08% CTR — 3–4x benchmark settore. Progettati flussi lifecycle che hanno aumentato la conversione da prova a abbonamento verso un livello di membership premium di alto valore. Architetto pricing su 3 proprietà.",
     "exp2Title":"Video Editor Freelance & Specialista Media IA","exp2Org":"Contratto — Dr. S. Smith",
     "exp2Text":"Editing contenuti video in Final Cut Pro con consegna file broadcast-ready. Upscaling a 4K con Topaz AI. Gestione workflow pubblicazione YouTube. Configurazione ambienti Microsoft 365 e Teams.",
     "exp3Title":"Founder — Rete Referral B2B & E-Commerce DTC","exp3Org":"Wix · Shopify · Meta Ads",
